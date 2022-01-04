@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.selectedDish.Name Details</title>
+</head>
+
+<body>
+    <button><a href="/">Home</a></button>
+    <h1>@ViewBag.selectedDish.Name</h1>
+    <p>@ViewBag.selectedDish.Chef</p>
+
+    <div class="jumbotron"> @*TAKE OFF*@
+        <p>@ViewBag.selectedDish.Description</p>
+        <p>Calories: @ViewBag.selectedDish.Calories</p>
+        <p>Tastiness: @ViewBag.selectedDish.Tastiness</p>
+
+        @*to delete dish*@
+        <button class="btn-danger"><a href="delete/@ViewBag.selectedDish.DishId">Delete</a></button>
+       
+       @*to edit dish*@
+        <a href="update/@ViewBag.selectedDish.DishId">Edit</a>
+    </div>
+</body>
+
+</html>

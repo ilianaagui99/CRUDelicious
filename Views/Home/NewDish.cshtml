@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Dish!</title>
+</head>
+<body>
+    <h1>Add a Dish!</h1>
+    <a href="/">Home</a>
+   
+    @model Dish
+     <form asp-action="AddDish" asp-controller="Home" method="post">
+
+        <span asp-validation-for="Chef"></span>
+        <label asp-for="Chef">Chef's Name:</label>
+        <input type="text" asp-for="Chef" id="">
+        <br>
+    
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name">Name of Dish:</label>
+        <input type="text" asp-for="Name"></input>
+        <br>
+
+        <span asp-validation-for="Calories"></span>
+        <label asp-for="Calories"># Of Calories:</label>
+        <input type="number" asp-for="Calories"></input>
+        <br>
+
+        <span asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness">Tastiness:</label>
+        <input type="number" asp-for="Tastiness"></input>
+        <br>
+        
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description">Description:</label>
+        <textarea rows="5" type="number" asp-for="Description"></textarea>
+        <br>
+
+        <button type="submit">Add Dish</button>
+      
+       
+    </form>
+
+</body>
+</html>

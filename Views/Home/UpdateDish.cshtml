@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Dish</title>
+</head>
+<body>
+    <h1>Edit @ViewBag.selectedDish.Name</h1>
+     @model Dish
+     <form asp-action="update/@ViewBag.DishId"  method="post">
+        <span asp-validation-for="Chef"></span>
+        <label asp-for="Chef">Chefs Name:</label>
+        <input type="text" asp-for="Chef" placeholder=@ViewBag.selectedDish.Chef>
+        <br>
+        <br>
+        
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name">Name of Dish:</label>
+        <input type="text" asp-for="Name" placeholder=@ViewBag.selectedDish.Name></input>
+        <br>
+
+        <span asp-validation-for="Calories"></span>
+        <label asp-for="Calories"># Of Calories:</label>
+        <input type="number" asp-for="Calories" placeholder=@ViewBag.selectedDish.Calories></input>
+        <br>
+
+        <span asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness">Tastiness:</label>
+        <input type="number" asp-for="Tastiness" placeholder=@ViewBag.selectedDish.Tastiness></input>
+        <br>
+
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description">Description:</label>
+        <textarea rows="5" type="number" asp-for="Description" placeholder=@ViewBag.selectedDish.Description></textarea>
+        <br>
+
+        <button type="submit">Edit Dish</button>
+
+         </form>
+</body>
+</html>
